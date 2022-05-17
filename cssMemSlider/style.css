@@ -51,8 +51,7 @@ body {
 #slide2:checked ~ .slides-container > .slide2,
 #slide3:checked ~ .slides-container > .slide3,
 #slide4:checked ~ .slides-container > .slide4,
-#slide5:checked ~ .slides-container > .slide5,
-#slide6:checked ~ .slides-container > .slide6 {
+#slide5:checked ~ .slides-container > .slide5 {
   display: block;
 }
 
@@ -69,8 +68,7 @@ input:checked ~ .text-container > .text {
 #slide2:checked ~ .text-container > .text2,
 #slide3:checked ~ .text-container > .text3,
 #slide4:checked ~ .text-container > .text4,
-#slide5:checked ~ .text-container > .text5,
-#slide6:checked ~ .text-container > .text6 {
+#slide5:checked ~ .text-container > .text5 {
   display: block;
 }
 
@@ -104,8 +102,7 @@ label:hover > div {
 #slide2:checked ~ .controls > label:nth-child(2) > .label-circle,
 #slide3:checked ~ .controls > label:nth-child(3) > .label-circle,
 #slide4:checked ~ .controls > label:nth-child(4) > .label-circle,
-#slide5:checked ~ .controls > label:nth-child(5) > .label-circle,
-#slide6:checked ~ .controls > label:nth-child(6) > .label-circle {
+#slide5:checked ~ .controls > label:nth-child(5) > .label-circle {
   background-color: transparent;
 }
 
