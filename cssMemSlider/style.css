@@ -1,0 +1,137 @@
+:root {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #989add;
+}
+
+.main {
+  background-color: #69646e;
+  max-width: 780px;
+  width: 100%;
+  border-radius: 10px;
+  border: groove;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+}
+
+.container {
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 10px;
+  padding-top: 10px;
+}
+.slides-container {
+  margin: 0 auto;
+  border: groove;
+  border-radius: 10px;
+}
+.slide {
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#slide1:checked ~ .slides-container > .slide1,
+#slide2:checked ~ .slides-container > .slide2,
+#slide3:checked ~ .slides-container > .slide3,
+#slide4:checked ~ .slides-container > .slide4,
+#slide5:checked ~ .slides-container > .slide5 {
+  display: block;
+}
+
+input:checked ~ .slides-container > .slide, 
+input:checked ~ .text-container > .text {
+  animation: 300ms ease-in-out 0s alternate slideAnimation;
+}
+
+.text {
+  display: none;
+}
+
+#slide1:checked ~ .text-container > .text1,
+#slide2:checked ~ .text-container > .text2,
+#slide3:checked ~ .text-container > .text3,
+#slide4:checked ~ .text-container > .text4,
+#slide5:checked ~ .text-container > .text5 {
+  display: block;
+}
+
+input {
+  display: none;
+}
+.controls {
+  display: flex;
+}
+
+label {
+  padding: 10px;
+  cursor: pointer;
+
+}
+
+.label-circle {
+  border: 2px solid #71ABFE;
+  width: 1rem;
+  height: 1rem;
+  background-color: #71ABFE;
+  border-radius: 3rem;
+}
+
+label:hover > div {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+#slide1:checked ~ .controls > label:nth-child(1) > .label-circle,
+#slide2:checked ~ .controls > label:nth-child(2) > .label-circle,
+#slide3:checked ~ .controls > label:nth-child(3) > .label-circle,
+#slide4:checked ~ .controls > label:nth-child(4) > .label-circle,
+#slide5:checked ~ .controls > label:nth-child(5) > .label-circle {
+  background-color: transparent;
+}
+
+.footer {
+  max-width: 780px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.link {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 769px) {
+  .text-container {
+    width: 100%;
+    order: 3;
+  }
+  .controls {
+    margin: auto;
+  }
+}
+
+@keyframes slideAnimation{
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
